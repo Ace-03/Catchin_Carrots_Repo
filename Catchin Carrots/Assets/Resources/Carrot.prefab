@@ -1,5 +1,89 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3878351099238369266
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2054194649319605738}
+  - component: {fileID: 4942733788166006663}
+  m_Layer: 0
+  m_Name: Carrot baby
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2054194649319605738
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3878351099238369266}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.567, z: 0}
+  m_LocalScale: {x: 1.6735928, y: 1.6735928, z: 1.6735928}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7803139405230518844}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &4942733788166006663
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3878351099238369266}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: af72f47e04b9b444ca33fac4a606c48d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.26666668, y: 0.58}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1001 &4239619812995373768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8,14 +92,46 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6240993147613216808, guid: a8c70b6f66f254d489464efcf7ed0d42, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240993147613216808, guid: a8c70b6f66f254d489464efcf7ed0d42, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6240993147613216981, guid: a8c70b6f66f254d489464efcf7ed0d42, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d0f7959cdc7e66d4e8f3f4820eb141d1, type: 2}
+    - target: {fileID: 6240993147613216982, guid: a8c70b6f66f254d489464efcf7ed0d42, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6240993148155937276, guid: a8c70b6f66f254d489464efcf7ed0d42, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d0f7959cdc7e66d4e8f3f4820eb141d1, type: 2}
+    - target: {fileID: 6240993148155937277, guid: a8c70b6f66f254d489464efcf7ed0d42, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240993148155937279, guid: a8c70b6f66f254d489464efcf7ed0d42, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240993148155937279, guid: a8c70b6f66f254d489464efcf7ed0d42, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240993148199655459, guid: a8c70b6f66f254d489464efcf7ed0d42, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.223
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240993148199655462, guid: a8c70b6f66f254d489464efcf7ed0d42, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6240993148631394548, guid: a8c70b6f66f254d489464efcf7ed0d42, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -60,18 +176,81 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6240993148631394549, guid: a8c70b6f66f254d489464efcf7ed0d42, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240993148631394549, guid: a8c70b6f66f254d489464efcf7ed0d42, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240993148631394549, guid: a8c70b6f66f254d489464efcf7ed0d42, type: 3}
+      propertyPath: m_Size.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240993148631394549, guid: a8c70b6f66f254d489464efcf7ed0d42, type: 3}
+      propertyPath: m_Center.y
+      value: -0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6240993148631394550, guid: a8c70b6f66f254d489464efcf7ed0d42, type: 3}
       propertyPath: m_Name
       value: Carrot
       objectReference: {fileID: 0}
+    - target: {fileID: 6240993148631394550, guid: a8c70b6f66f254d489464efcf7ed0d42, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6240993148631394548, guid: a8c70b6f66f254d489464efcf7ed0d42, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2054194649319605738}
   m_SourcePrefab: {fileID: 100100000, guid: a8c70b6f66f254d489464efcf7ed0d42, type: 3}
+--- !u!4 &7803139405230518844 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6240993148631394548, guid: a8c70b6f66f254d489464efcf7ed0d42, type: 3}
+  m_PrefabInstance: {fileID: 4239619812995373768}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7803139405230518846 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6240993148631394550, guid: a8c70b6f66f254d489464efcf7ed0d42, type: 3}
   m_PrefabInstance: {fileID: 4239619812995373768}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2588829717184934376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803139405230518846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e4e66244a82f44dbcd08eefe724266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptMessage: Press E to Snatch Carrot!
+--- !u!114 &4021031843930650798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803139405230518846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6acd43645c5ab6d4c8dc830dddad8f27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 7803139405611942636}
+  distance: 3
+  objectMask:
+    serializedVersion: 2
+    m_Bits: 256
+  FarmerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  playerUI: {fileID: 0}
+  jail: {fileID: 0}
 --- !u!114 &7329284474158887392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,6 +290,11 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!20 &7803139405611942636 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 6240993148199655460, guid: a8c70b6f66f254d489464efcf7ed0d42, type: 3}
+  m_PrefabInstance: {fileID: 4239619812995373768}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7803139405611942638 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6240993148199655462, guid: a8c70b6f66f254d489464efcf7ed0d42, type: 3}

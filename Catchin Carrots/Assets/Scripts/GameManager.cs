@@ -4,6 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviourPun
 {
@@ -13,8 +14,9 @@ public class GameManager : MonoBehaviourPun
     public PlayerController[] players;
     public Transform[] CarrotSpawnPoints;
     public Transform[] FarmerSpawnPoints;
+    public Transform jail;
     public int alivePlayers;
-
+    public int CarrotsCaught;
     private int playersInGame;
 
     public float postGameTime;
@@ -58,6 +60,7 @@ public class GameManager : MonoBehaviourPun
     {
         GameObject playerObj = PhotonNetwork.Instantiate(playerPrefabLocation, CarrotSpawnPoints[Random.Range(0, CarrotSpawnPoints.Length)].position, Quaternion.identity);
 
+        playerObj.GetComponent<PlayerController>().IsFarmer = false;
         //initalize the player for all other players
         playerObj.GetComponent<PlayerController>().photonView.RPC("Initialize", RpcTarget.All, PhotonNetwork.LocalPlayer);
     }
@@ -68,11 +71,17 @@ public class GameManager : MonoBehaviourPun
     {
         GameObject playerObj = PhotonNetwork.Instantiate(FarmerPrefabLocation, FarmerSpawnPoints[Random.Range(0, CarrotSpawnPoints.Length)].position, Quaternion.identity);
 
+        playerObj.GetComponent<PlayerController>().IsFarmer = true;
+
         //initalize the player for all other players
         playerObj.GetComponent<PlayerController>().photonView.RPC("Initialize", RpcTarget.All, PhotonNetwork.LocalPlayer);
     }
 
-
+    [PunRPC]
+    public void CarrotJail(PlayerController carrot)
+    {
+        carrot.transform.position = jail.position;
+    }
 
     public PlayerController GetPlayer(int playerId)
     {
@@ -96,31 +105,26 @@ public class GameManager : MonoBehaviourPun
 
     public void CheckWinCondition()
     {
-
-        if (alivePlayers == 1)
-        {
-            int killAmount = 0;
-            string MostKillPlayerName = "";
-
-
-            photonView.RPC("WinGame", RpcTarget.All, MostKillPlayerName, killAmount);
-        }
+        if(CarrotsCaught == PhotonNetwork.PlayerList.Length -1)
+            photonView.RPC("FarmerWins", RpcTarget.All);
     }
 
     [PunRPC]
-    void WinGame(string winningPlayer, int killAmount)
+    public void CarrotsWins()
     {
-        // set the UI win text
-        //GameUI.instance.SetWinText(winningPlayer,killAmount);
+        SceneManager.LoadScene("CarrotEnd");
+    }
 
-        Invoke("GoBackToMenu", postGameTime);
+    [PunRPC]
+    public void FarmerWins()
+    {
+        SceneManager.LoadScene("FarmerEnd");
+
     }
 
     void GoBackToMenu()
     {
         NetworkManager.instance.ChangeScene("Menu Scene");
-    }
-
-    
+    } 
 
 }

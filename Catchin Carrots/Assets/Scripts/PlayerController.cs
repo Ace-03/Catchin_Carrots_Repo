@@ -10,17 +10,12 @@ public class PlayerController : MonoBehaviourPun
     public float moveSpeed;
     public float jumpForce;
     public Rigidbody rig;
+    public bool IsFarmer;
 
     [Header("NetworkStats")]
     public int id;
     public Player photonPlayer;
     public string PlayerName;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -75,11 +70,16 @@ public class PlayerController : MonoBehaviourPun
         }
         else
         {
-            //GameUI.instance.Initialize(this);
+            PlayerUI.instance.Initialize(this);
         }
 
         //PlayerNameText.text = player.NickName;
         GameManager.instance.alivePlayersList.Add(player.NickName);
     }
 
+    [PunRPC]
+    public void TeleportPlayer(Vector3 trans)
+    {
+        gameObject.transform.position = trans;
+    }
 }
